@@ -1,0 +1,61 @@
+benja@PC-BENJITO MINGW64 ~/Desktop
+$ mkdir branching_merging
+
+benja@PC-BENJITO MINGW64 ~/Desktop
+$ cd ./branching_merging/
+
+benja@PC-BENJITO MINGW64 ~/Desktop/branching_merging
+$ touch index.html
+
+benja@PC-BENJITO MINGW64 ~/Desktop/branching_merging
+$ touch style.css
+
+benja@PC-BENJITO MINGW64 ~/Desktop/branching_merging
+$ git init
+Initialized empty Git repository in C:/Users/benja/Desktop/branching_merging/.git/
+
+/ / / switched to VSCode Terminal / / /
+
+
+PS C:\Users\benja\Desktop\branching_merging> git add .
+On branch master
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   style.css
+PS C:\Users\benja\Desktop\branching_merging> git commit -m 'first commit'
+[master (root-commit) 6da4d78] first commit
+ create mode 100644 index.html
+ create mode 100644 style.css
+PS C:\Users\benja\Desktop\branching_merging> git status
+On branch master
+nothing to commit, working tree clean
+PS C:\Users\benja\Desktop\branching_merging> git branch add-css
+PS C:\Users\benja\Desktop\branching_merging> git branch  
+  add-css
+Switched to branch 'add-css'
+PS C:\Users\benja\Desktop\branching_merging> git branch
+  master
+PS C:\Users\benja\Desktop\branching_merging> git status
+Changes not staged for commit:
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS C:\Users\benja\Desktop\branching_merging> git add .
+PS C:\Users\benja\Desktop\branching_merging> git commit -m 'adding css'
+[add-css 845a121] adding css
+PS C:\Users\benja\Desktop\branching_merging> git status
+On branch add-css
+Switched to branch 'master'
+PS C:\Users\benja\Desktop\branching_merging> git branch
+  add-css
+* master
+PS C:\Users\benja\Desktop\branching_merging> git merge add-css
+Updating 6da4d78..845a121
+Fast-forward
+ index.html | 17 +++++++++++------
+ 2 files changed, 28 insertions(+), 6 deletions(-)
+PS C:\Users\benja\Desktop\branching_merging> git branch
+  add-css
+* master
